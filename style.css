@@ -320,6 +320,7 @@ section {
 
 #experience {
   position: relative;
+  min-height: 800px;
 }
 
 .experience-sub-title {
@@ -331,21 +332,25 @@ section {
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   flex-direction: column;
+  margin: auto;
+  padding: auto;
 }
 
 .article-container {
   display: flex;
+  margin: auto;
+  height: 80%;
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: space-around;
 }
 
 article {
-  display: flex;
+  display: column;
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
@@ -380,6 +385,17 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+.btn-container {
+  position: relative;
+  overflow: auto;
+}
+
+.article-container {
+  min-height: 20rem;
+  overflow: auto;
+  margin: 0.2rem;
 }
 
 /* CONTACT */

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script
+      src="https://kit.fontawesome.com/f8d7cacfd3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9
+..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family
+=Inter:wght@400;700&family=Poppins:wght@100;200;300;400;600;700&family=Work+Sans:
+ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Amos Chitsa</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Amos Chitsa</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section_pic-container">
+        <img
+          src="./assets/profile picture.jpg"
+          alt="Amos Chitsa profile picture"
+          srcset=""
+        />
+      </div>
+      <div class="section_text">
+        <p class="section_text_p1">Hello I'm Amos Chitsa</p>
+        <h1 class="title">Your Web Developer</h1>
+        <p class="section_text_p2">Welcome to my Portfolio</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color2"
+            onclick='window.open("./assets/WebDev-Gen-comp.pdf")'
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color1" onclick='location.href="#contact"'>
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linked-in-logo.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick='location.href=("https://gb.linkedin.com/")'
+          />
+          <img
+            src="./assets/git-hub-logo.png"
+            alt="My Github profile"
+            target="blank"
+            class="icon"
+            onclick='location.href=("https://github.com/")'
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section_text_p1">Get to know more</p>
+      <h1 class="title">About me</h1>
+      <div class="section-container">
+        <div class="section_pic-container">
+          <img
+            src="./assets/about-me-pic.jpg"
+            alt="profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/checkmark.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                &#8226; 2+ years Frontend Development<br />&#8226; HTML, CSS,
+                Javascript, React <br />
+                &#8226; Managing several live websites
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/interests-icon.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Interests</h3>
+              <p>
+                &#8226; Cooking<br />&#8226; Designing flyers and posters for
+                clients - using Adobe Illustrator <br />
+                &#8226; Fitness - weight training and HIIT workouts
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              My mantra has always been - 'Strive more, learn more'. I am an
+              individual with varied interests, I am someone who's always up for
+              a challenge and who's always ready to learn more. I beleive that
+              learning never stops, this has made me a better developer in the
+              ever changing world of tech. I utilise past experience to tackle
+              tasks while also being open to new methods of problem solving.
+              Enjoy scrolling through my portfolio, feel free to contact me and
+              let's make something
+              <i>special.</i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/down-arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section_text_p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>HTML</h3>
+                <p>Creating responsive web apps</p>
+                <br />
+                <p>Modifying websites made by other developers</p>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>CSS</h3>
+                <p>Styling web apps to a professional level</p>
+                <br />
+                <p>
+                  Optimising apps for all types of devices(mobile, tablet etc)
+                </p>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>Javascript</h3>
+                <p>
+                  Adding major functionality to web apps, making them
+                  interactive
+                </p>
+                <br />
+                <p>
+                  Working with API's and outside data to create dynamic apps
+                </p>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>React</h3>
+                <p>Streamlining the development process using React's power</p>
+                <br />
+                <p>Ensuring apps are robust and tested</p>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Design</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>Flyers & Posters</h3>
+                <p>
+                  Creating marketable flyers, poster and other media for
+                  businesses
+                </p>
+                <br />
+                <p>Preparing the media I have designed for print</p>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>Logos</h3>
+                <p>Designing standout logos for businesses</p>
+                <br />
+                <p>
+                  Creating a brand around a logo to bring a vision to creators
+                </p>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>Branded Packaging</h3>
+                <p>Creating a varied list of brand looks for companies</p>
+                <br />
+                <p>
+                  Using design principles to make brands look more professional
+                </p>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>Animations</h3>
+                <p>Making animations for content creators</p>
+                <br />
+                <p>
+                  Using animations to bring more viewership to advertisements
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/down-arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section_text_p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div>
+        <canvas id="canvas" width="300" height="300"></canvas>
+      </div>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/stopwatch-app-preview.jpg"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Useful Stopwatch Web App
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color2 project-btn"
+                onclick="location.href='https://amoschitsa.github.io/stopwatchbyamos.github.io/'"
+              >
+                Stopwatch
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/magic-colour-changer-preview.jpg"
+                class="project-img"
+                alt="project 2"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Magic Colour Changer
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color2 project-btn"
+                onclick="location.href='https://amoschitsa.github.io/magiccolourchanger.github.io/'"
+              >
+                Magic Colour Changer
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/flashcards-preview.jpg"
+                class="project-img"
+                alt="project 2"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Flashcards</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color2 project-btn"
+                onclick="location.href='https://amoschitsa.github.io/flashcards.github.io/'"
+              >
+                Magic Colour Changer
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/math4kids-preview.jpg"
+                class="project-img"
+                alt="project 2"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Math4Kids</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color2 project-btn"
+                onclick="location.href='https://amoschitsa.github.io/maths4kids/'"
+              >
+                Math4Kids Quiz Game
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/down-arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section_text_p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email-icon.png"
+            alt="Email icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="mailto:a.chitsa@hotmail.co.uk">a.chitsa@hotmail.co.uk</a>
+          </p>
+        </div>
+      </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email-icon.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>Mobile: 07496125103</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Amos Chitsa</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

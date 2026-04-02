@@ -1,1 +1,8 @@
+<<<<<<< Updated upstream
 Three
+=======
+Three
+3
+3
+Adding dark mode UI
+>>>>>>> Stashed changes

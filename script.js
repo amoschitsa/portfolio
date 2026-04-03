@@ -200,3 +200,11 @@ function gameLoop() {
 
 initBall();
 gameLoop();
+
+//show initial fact
+window.addEventListener("DOMContentLoaded", function () {
+    const fact = facts[currentFact];
+    img.src = fact.img;
+    title.textContent = fact.title;
+    info.textContent = fact.info;
+});

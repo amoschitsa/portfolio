@@ -201,10 +201,65 @@ function gameLoop() {
 initBall();
 gameLoop();
 
+
+//facts data
+const facts = [
+    {
+        id: 1,
+        img: "assets/first_lorry.jpeg",
+        title: "Fact 1",
+        info: "The first lorry was invented in Germany in 1896 and built by the German automotive pioneer, Damlier.",
+    },
+    {
+        id: 2,
+        img: "assets/wembley.jpeg",
+        title: "Fact 2",
+        info: "The amount of beer carried by UK lorries in a year would be enough to fill Wembley stadium",
+    },
+    {
+        id: 3,
+        img: "assets/lorry_driver.jpeg",
+        title: "Fact 3",
+        info: "The haulage sector is the UKs fifth-largest employer.",
+    },
+]
+//load fact elements
+const img = document.getElementById("fact-img");
+const title = document.getElementById("fact-title");
+const info = document.getElementById("fact-info");
+
+// get fact buttons
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+
+//initialise current fact
+let currentFact = 0;
+
+
+// show fact
+function showFact(current_fact) {
+    const fact = facts[current_fact];
+    img.src = fact.img;
+    title.textContent = fact.title;
+    info.textContent = fact.info;
+};
+
+
 //show initial fact
 window.addEventListener("DOMContentLoaded", function () {
     const fact = facts[currentFact];
     img.src = fact.img;
     title.textContent = fact.title;
     info.textContent = fact.info;
+});
+
+nextBtn.addEventListener("click", function () {
+    currentFact++;
+    showFact(currentFact);
+});
+
+prevBtn.addEventListener("click", function () {
+    currentFact--;
+    showFact(currentFact);
 });

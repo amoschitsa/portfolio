@@ -305,6 +305,192 @@ questions.forEach(function (question) {
 });
 
 
+//MENU Section
+
+const menu = [
+    {
+      id: 1,
+      title: "buttermilk pancakes",
+      category: "breakfast",
+      price: 15.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+    },
+    {
+      id: 2,
+      title: "diner double",
+      category: "lunch",
+      price: 13.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+    },
+    {
+      id: 3,
+      title: "godzilla milkshake",
+      category: "shakes",
+      price: 6.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+    },
+    {
+      id: 4,
+      title: "country delight",
+      category: "breakfast",
+      price: 20.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
+    },
+    {
+      id: 5,
+      title: "egg attack",
+      category: "lunch",
+      price: 22.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
+    },
+    {
+      id: 6,
+      title: "oreo dream",
+      category: "shakes",
+      price: 18.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
+    },
+    {
+      id: 7,
+      title: "bacon overflow",
+      category: "breakfast",
+      price: 8.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+    },
+    {
+      id: 8,
+      title: "american classic",
+      category: "lunch",
+      price: 12.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    },
+    {
+      id: 9,
+      title: "quarantine buddy",
+      category: "shakes",
+      price: 16.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
+    {
+      id: 10,
+      title: "bison steak",
+      category: "dinner",
+      price: 22.99,
+      img: "/assets/first_lorry.jpeg" ,
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
+  ];
+
+
+
+/*const sectionCenter = document.querySelector('.section-center');
+
+window.addEventListener("DOMContentLoaded", function () {
+    let displayMenu = menu.map(function (item) {
+        return `<article class="menu-item">
+        <img src="${item.img}" alt="${item.title}" 
+        class="photo">
+        <div class="item-info">
+            <header>
+                <h4 class="${item.title}">Buttermilk Pancake</h4>
+                <h4 class="${item.price}">15.99</h4>
+        </header>
+        <p class="item-text">
+        ${item.desc}
+        </p>
+        </div>
+  </article>`;
+    });
+    displayMenu = displayMenu.join("");
+    sectionCenter.innerHTML = displayMenu;
+});
+*/
+
+
+
+
+//when the page loads,load an article html with all the relevant fields
+//and data from array above
+
+
+//add an event listener for when page opens
+//map the menu array 
+//add the mapped array to a variable
+//assign the section-center html tag to a variable
+//send each of the mapped array elements to the sc variable
+
+const sectionCenter = document.querySelector(".section-center");
+const filterBtns = document.querySelectorAll(".filter-btn");
+
+//load items
+window.addEventListener("DOMContentLoaded", function () {
+    displayMenuItems(menu);
+});
+
+//filter items
+filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+        const catergory = e.currentTarget.dataset.id;
+        const menuCategory = menu.filter(function (menuItem) {
+            if (menuItem.category === category) {
+                return menuItem;
+            }
+        });
+        if (category === "all") {
+            displayMenuItems(menu);
+        } else {
+            displayMenuItems(menuCategory);
+        }
+    });
+});
+
+
+ 
+function displayMenuItems(menuItems) {
+    let displayMenu = menuItems.map(function (item) {
+        return `
+        <article class="menu-item">
+        <img src=${item.img} alt="menu item" class="photo">
+          <div class="item-info">
+            <header>
+              <h4 class="title">${item.title}</h4>
+              <h4 class="price">${item.price}</h4>
+            </header>
+                <p class="text">${item.desc}
+                </p>
+          </div>
+      </article>
+        `
+    });
+    displayMenu = displayMenu.join("");
+    sectionCenter.innerHTML = displayMenu;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -473,9 +473,31 @@ article .icon {
   display: none;
 }
 
+/* MENU */
+
+.menu{
+  display: flex;
+  justify-content: start;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+
+}
+
 /* FOOTER */
 
 footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer{
   height: 26vh;
   margin: 0 1rem;
 }

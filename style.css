@@ -490,6 +490,45 @@ article .icon {
 
 }
 
+/* DAILY CHECKS SECTION */
+.daily-checks-section-center{
+  max-width: 300px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+/* QUIZ */
+
+.quiz-container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quiz-container .timer {
+  font-weight: bold;
+  text-align: right;
+}
+
+.timer.danger {
+  color: red;
+}
+
+.quiz-container h2.question{
+  font-size: 20px;
+  background: #d0ecff;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: normal;
+}
+
+.quiz-container .options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+
 /* FOOTER */
 
 footer {

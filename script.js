@@ -290,7 +290,7 @@ btns.forEach(function (btn) {
 
 //grab all buttons from faqs and toggle hiding text
 
-const questions = document.querySelectorAll(".question");
+const questions = document.querySelectorAll(".faq-question");
 
 questions.forEach(function (question) {
     const btn = question.querySelector(".question-btn");
@@ -306,7 +306,7 @@ questions.forEach(function (question) {
 });
 
 
-//MENU Section
+//DAILY checks section
 
 const dailyChecksSectionCenter = document.querySelector(".daily-checks-section-center");
 const dailyChecksBtnContainer = document.querySelector(".daily-checks-btn-container");
@@ -378,6 +378,7 @@ const dailyWalkAroundChecks = [
 ];
 
 window.addEventListener("DOMContentLoaded", function () {
+    console.log("HI");
     displayWalkAroundChecks(dailyWalkAroundChecks);
     displayWalkAroundCheckBtns()
 });
